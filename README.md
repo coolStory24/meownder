@@ -17,11 +17,11 @@ _Учебный проект на Flutter_
 
 ## Скриншоты
 
-![Screenshot](img\photo_2025-03-20_19-35-34.jpg)
-![Screenshot](img\photo_2025-03-20_19-35-43.jpg)
-![Screenshot](img\photo_2025-03-20_19-35-48.jpg)
-![Screenshot](img\photo_2025-03-20_19-35-53.jpg)
+![Screenshot](img/photo_2025-03-20_19-35-34.jpg)
+![Screenshot](img/photo_2025-03-20_19-35-43.jpg)
+![Screenshot](img/photo_2025-03-20_19-35-48.jpg)
+![Screenshot](img/photo_2025-03-20_19-35-53.jpg)
 
 ## Скачать приложение
 
-- [APK](apk\app-release.apk)
+- [APK](apk/app-release.apk)
