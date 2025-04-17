@@ -117,9 +117,7 @@ class HomeScreenState extends State<HomeScreen> {
                               context,
                               MaterialPageRoute(
                                 builder:
-                                    (context) => DetailScreen(
-                                      cat: (state as HomeLoaded).cat,
-                                    ),
+                                    (context) => DetailScreen(cat: state.cat),
                               ),
                             );
                           }
@@ -154,7 +152,7 @@ class HomeScreenState extends State<HomeScreen> {
                                         top: Radius.circular(16),
                                       ),
                                       child: Image.network(
-                                        (state as HomeLoaded).cat.url,
+                                        state.cat.url,
                                         fit: BoxFit.cover,
                                         width: double.infinity,
                                         loadingBuilder: (
@@ -162,8 +160,9 @@ class HomeScreenState extends State<HomeScreen> {
                                           child,
                                           loadingProgress,
                                         ) {
-                                          if (loadingProgress == null)
+                                          if (loadingProgress == null) {
                                             return child;
+                                          }
                                           return Center(
                                             child: CircularProgressIndicator(
                                               valueColor:
@@ -204,7 +203,7 @@ class HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ),
                                     child: Text(
-                                      (state as HomeLoaded).cat.breedName,
+                                      state.cat.breedName,
                                       style: TextStyle(
                                         fontFamily: 'DancingScript',
                                         fontSize: 20,

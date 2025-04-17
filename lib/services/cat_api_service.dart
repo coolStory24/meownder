@@ -1,10 +1,10 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../models/cat.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class CatApiService {
-  static const String _apiKey =
-      'live_M7VVMPpY8JnMPTIpNXJaKXuQUYbt3jV4l4LnTaZfTudbvHAaFgAg8whzQ3kSQH50';
+  static final String _apiKey = dotenv.get('API_KEY', fallback: "empty-key");
   static const String _baseUrl = 'https://api.thecatapi.com/v1/images/search';
 
   Future<Cat> fetchRandomCat() async {

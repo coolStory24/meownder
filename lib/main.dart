@@ -5,10 +5,18 @@ import 'screens/liked_cats_screen.dart';
 import 'blocs/home/home_bloc.dart';
 import 'data/repositories/cat_repository.dart';
 import 'di.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  try {
+    await dotenv.load(fileName: ".env");
+  } catch (e) {
+    throw Exception('Error loading .env file: $e');
+  }
+
   setupDependencies();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
