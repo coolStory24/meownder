@@ -39,4 +39,4 @@ _Учебный проект на Flutter_
 
 ## Скачать приложение
 
-- [APK](https://github.com/coolStory24/meownder/raw/master/apk/app-release.apk)
+- [APK](https://github.com/coolStory24/meownder/raw/task_2/apk/app-release.apk)
