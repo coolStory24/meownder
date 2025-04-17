@@ -20,7 +20,7 @@ class CatApiService {
         throw Exception('Failed to load cat: ${response.statusCode}');
       }
     } catch (e) {
-      rethrow;
+      throw Exception('Network error: $e');
     }
   }
 }

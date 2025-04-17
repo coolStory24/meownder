@@ -19,6 +19,16 @@ class DetailScreen extends StatelessWidget {
               fit: BoxFit.cover,
               width: double.infinity,
               height: 300,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) return child;
+                return Center(
+                  child: CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(
+                      Color(0xFFFE3C72),
+                    ),
+                  ),
+                );
+              },
               errorBuilder:
                   (context, error, stackTrace) =>
                       Icon(Icons.error, size: 50, color: Color(0xFFFE3C72)),
